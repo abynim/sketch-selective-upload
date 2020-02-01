@@ -1,0 +1,68 @@
+{
+  "commands" : [
+      {
+          "script" : "script.js",
+          "handler" : "setPrefix",
+          "shortcut" : "",
+          "name" : "Set Prefix",
+          "identifier" : "prefix"
+      },
+      {
+          "script" : "script.js",
+          "handler" : "ignore",
+          "shortcut" : "",
+          "name" : "Exclude Selected Artboards",
+          "identifier" : "ignoreArtboard"
+      },
+      {
+          "script" : "script.js",
+          "handler" : "ignore",
+          "shortcut" : "",
+          "name" : "Exclude All Artboards in Page",
+          "identifier" : "ignorePage"
+      },
+      {
+          "script" : "script.js",
+          "handler" : "ignore",
+          "shortcut" : "",
+          "name" : "Reset Selected Artboards",
+          "identifier" : "resetArtboard"
+      },
+      {
+          "script" : "script.js",
+          "handler" : "ignore",
+          "shortcut" : "",
+          "name" : "Reset All Artboards in Page",
+          "identifier" : "resetPage"
+      },
+      {
+          "script": "script.js",
+          "handlers": {
+              "actions": {
+                  "Startup" : "go"
+              }
+          }
+      }
+  ],
+  "menu": {
+      "title" : "Selective Upload",
+      "items": [
+          "ignoreArtboard",
+          "ignorePage",
+          "-",
+          "resetArtboard",
+          "resetPage",
+          "-",
+          "prefix"
+      ]
+  },
+  "identifier" : "com.abynim.SelectiveUpload",
+  "version" : "0.1",
+  "icon" : "icon.png",
+  "description" : "Exclude artboards from uploading to Sketch Cloud",
+  "author" : "Aby Nimbalkar",
+  "name" : "Selective Upload",
+  "disableCocoaScriptPreprocessor" : true,
+  "homepage" : "https://github.com/abynim/sketch-selective-upload",
+  "appcast" : "https://raw.githubusercontent.com/abynim/sketch-selective-upload/master/.appcast.xml"
+}
