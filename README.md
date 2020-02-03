@@ -1,5 +1,5 @@
 # Selective Upload
-Exclude certain Artboards when uploading your document to Sketch Cloud
+Exclude Artboards and Pages when uploading your Document to Sketch Cloud.
 
 ---
 

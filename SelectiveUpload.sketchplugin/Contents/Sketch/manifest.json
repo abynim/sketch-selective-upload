@@ -36,6 +36,20 @@
           "identifier" : "resetPage"
       },
       {
+          "script" : "script.js",
+          "handler" : "ignorePage",
+          "shortcut" : "",
+          "name" : "Exclude Current Page",
+          "identifier" : "ignoreCurrentPage"
+      },
+      {
+          "script" : "script.js",
+          "handler" : "ignorePage",
+          "shortcut" : "",
+          "name" : "Reset Current Page",
+          "identifier" : "resetCurrentPage"
+      },
+      {
           "script": "script.js",
           "handlers": {
               "actions": {
@@ -49,17 +63,19 @@
       "items": [
           "ignoreArtboard",
           "ignorePage",
+          "ignoreCurrentPage",
           "-",
           "resetArtboard",
           "resetPage",
+          "resetCurrentPage",
           "-",
           "prefix"
       ]
   },
   "identifier" : "com.abynim.SelectiveUpload",
-  "version" : "0.1",
+  "version" : "0.2",
   "icon" : "icon.png",
-  "description" : "Exclude artboards from uploading to Sketch Cloud",
+  "description" : "Exclude artboards and pages when uploading to Sketch Cloud",
   "author" : "Aby Nimbalkar",
   "name" : "Selective Upload",
   "disableCocoaScriptPreprocessor" : true,

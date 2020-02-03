@@ -7,12 +7,17 @@ var go = function(context) {
   }
 }
 
-var setPrefix = function(context) {
-    var UI = require('sketch/ui');
-    
+var getPrefix = function() {
     const defaultsKey = "com.abynim.SelectiveUpload.prefix";
     var currentPrefix = NSUserDefaults.standardUserDefaults().stringForKey(defaultsKey);
     currentPrefix = currentPrefix ? ""+currentPrefix : "--";
+    return currentPrefix;
+}
+
+var setPrefix = function(context) {
+    var UI = require('sketch/ui');
+    
+    var currentPrefix = getPrefix();
     
     UI.getInputFromUser(
       "When uploading to Sketch Cloud, ignore Artboards with prefix:",
@@ -30,9 +35,7 @@ var setPrefix = function(context) {
 
 var ignore = function(context) {
     
-    const defaultsKey = "com.abynim.SelectiveUpload.prefix";
-    var prefix = NSUserDefaults.standardUserDefaults().stringForKey(defaultsKey);
-    if(!prefix) prefix = "--";
+    var prefix = getPrefix();
     
     var artboards;
     
@@ -57,6 +60,26 @@ var ignore = function(context) {
             if(!artboard.name().hasPrefix(prefix)) {
                 artboard.setName(prefix + "" + artboard.name());
             }
+        }
+    }
+    
+}
+
+var ignorePage = function(context) {
+    
+    var prefix = getPrefix();
+    
+    var shouldReset = context.command.identifier().hasPrefix("reset");
+    var currentPage = context.document.currentPage();
+    if(shouldReset) {
+        if(currentPage.name().hasPrefix(prefix)) {
+            var pageName = ""+currentPage.name();
+            currentPage.setName(pageName.substr(prefix.length));
+        }
+    }
+    else {
+        if(!currentPage.name().hasPrefix(prefix)) {
+            currentPage.setName(prefix + "" + currentPage.name());
         }
     }
     
