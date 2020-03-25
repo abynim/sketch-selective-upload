@@ -73,7 +73,7 @@
       ]
   },
   "identifier" : "com.abynim.SelectiveUpload",
-  "version" : "0.2",
+  "version" : "0.2.1",
   "icon" : "icon.png",
   "description" : "Exclude artboards and pages when uploading to Sketch Cloud",
   "author" : "Aby Nimbalkar",
