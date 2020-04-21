@@ -7,8 +7,9 @@ var go = function(context) {
   }
 }
 
+const defaultsKey = "com.abynim.SelectiveUpload.prefix";
+
 var getPrefix = function() {
-    const defaultsKey = "com.abynim.SelectiveUpload.prefix";
     var currentPrefix = NSUserDefaults.standardUserDefaults().stringForKey(defaultsKey);
     currentPrefix = currentPrefix ? ""+currentPrefix : "--";
     return currentPrefix;
