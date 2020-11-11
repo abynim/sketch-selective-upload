@@ -8,6 +8,10 @@ With this plugin enabled, Artboards and Pages prefixed with `--` are ignored whe
 
 You can customize this prefix in the plugin's settings.
 
+************************
+### ⚠️ Warning: DO NOT use Selective Upload if your original file is not backed up somewhere other than Sketch Cloud.
+************************
+
 
 ## Installation
 Download the contents of this repository, then double-click the `SelectiveUpload.sketchplugin` bundle.  
