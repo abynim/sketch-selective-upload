@@ -1,3 +1,7 @@
+**⚠️ Note: The plugin currently does not work in Sketch 71 or above.**
+
+---
+
 # Selective Upload
 
 Exclude Artboards and Pages when uploading your Document to [Sketch](https://sketch.com) Cloud.
